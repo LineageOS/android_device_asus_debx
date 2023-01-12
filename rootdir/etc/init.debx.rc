@@ -77,6 +77,9 @@ on boot
     # java.io.FileNotFoundException: /proc/cmdline: open failed: EACCES (Permission denied)
     chmod 0644 /proc/cmdline
 
+    #Create NETMGR daemon socket area
+    mkdir /dev/socket/netmgr 0750 radio radio
+
     #port-bridge
     chmod 0660 /dev/smd0
     chown system system /dev/smd0
