@@ -37,7 +37,9 @@ $(call inherit-product, device/asus/flox/device-common.mk)
 # inherit from the non-open-source side, if present
 $(call inherit-product-if-exists, vendor/asus/debx/debx-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/asus/debx/overlay
+DEVICE_PACKAGE_OVERLAYS += \ 
+    device/asus/debx/overlay \
+    device/asus/flox/overlay-lineage
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.debx:$(TARGET_COPY_OUT_RAMDISK)/fstab.flox \
