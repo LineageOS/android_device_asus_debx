@@ -20,26 +20,21 @@ PRODUCT_PACKAGES := \
     CarrierConfig \
     BasicSmsReceiver
 
-# Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.deb \
-    init.deb.rc
-
 # Features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.deb
+    camera.debx
 
 PRODUCT_PACKAGES += \
     hostapd_default.conf
 
 # the actual meat of the device-specific product definition
-$(call inherit-product, device/asus/flo/device-common.mk)
+$(call inherit-product, device/asus/flox/device-common.mk)
 
 # inherit from the non-open-source side, if present
-$(call inherit-product-if-exists, vendor/asus/deb/deb-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/debx/debx-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/asus/deb/overlay
+DEVICE_PACKAGE_OVERLAYS := device/asus/debx/overlay

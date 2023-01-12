@@ -17,6 +17,6 @@
 set -e
 
 export VENDOR=asus
-export DEVICE=deb
+export DEVICE=debx
 
-./../flo/extract-files.sh $@
+./../flox/extract-files.sh $@
