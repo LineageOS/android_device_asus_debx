@@ -21,7 +21,7 @@ TARGET_SYSTEM_PROP := \
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/debx
 
 # Recovery
-TARGET_RECOVERY_FSTAB = device/asus/debx/rootdir/etc/fstab.debx
+TARGET_RECOVERY_FSTAB := device/asus/debx/rootdir/etc/fstab.debx
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += device/asus/debx/sepolicy
