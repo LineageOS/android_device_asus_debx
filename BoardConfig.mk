@@ -13,7 +13,7 @@ TARGET_BOOTLOADER_NAME := deb
 TARGET_BOARD_INFO_FILE := device/asus/debx/board-info.txt
 
 # Properties
-TARGET_SYSTEM_PROP := \
+TARGET_SYSTEM_PROP += \
     device/asus/flox/system.prop \
     device/asus/debx/system.prop
 
