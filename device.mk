@@ -20,6 +20,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/asus/debx/overlay \
     device/asus/flox/overlay-lineage
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay/packages/apps/Bluetooth
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
