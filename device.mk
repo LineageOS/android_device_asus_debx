@@ -17,8 +17,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/asus/debx/overlay \
-    device/asus/flox/overlay-lineage
+    device/asus/debx/overlay
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay/packages/apps/Bluetooth
