@@ -12,6 +12,9 @@ TARGET_BOOTLOADER_BOARD_NAME := deb
 TARGET_BOOTLOADER_NAME := deb
 TARGET_BOARD_INFO_FILE := device/asus/debx/board-info.txt
 
+# Manifest
+DEVICE_MANIFEST_FILE += device/asus/debx/manifest.xml
+
 # Properties
 TARGET_SYSTEM_PROP += \
     device/asus/flox/system.prop \
