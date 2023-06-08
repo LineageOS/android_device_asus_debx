@@ -1,0 +1,5 @@
+### All blobs from this list, unless pinned and noted as otherwise,
+### are from from razorg-user 6.0.1 MOB30X 3036618 release-keys.
+
+lib/libril-qc-qmi-1.so:vendor/lib/libril-qc-qmi-1.so
+lib/libril-qcril-hook-oem.so:vendor/lib/libril-qcril-hook-oem.so
