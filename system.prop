@@ -1,11 +1,8 @@
 # Telephony
+DEVICE_PROVISIONED=1
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.use_cc_names=true
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
-# Preferred network type - LTE, WCDMA, GSM
 ro.telephony.default_network=9
 ro.telephony.get_imsi_from_sim=true
 telephony.lteOnGsmDevice=1
-DEVICE_PROVISIONED=1
-# Do not power down SIM card when modem is sent to Low Power Mode.
-persist.radio.apm_sim_not_pwdn=1
-# Display Traditional Chinese/Simplified Chinese carriers name
-persist.radio.use_cc_names=true

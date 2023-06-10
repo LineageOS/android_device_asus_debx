@@ -1,3 +1,7 @@
+# Copyright (C) 2011 The Android Open Source Projec
+# Copyright (C) 2023 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
 ### All blobs from this list, unless pinned and noted as otherwise,
 ### are from from razorg-user 6.0.1 MOB30X 3036618 release-keys.
 

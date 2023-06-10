@@ -1,14 +1,14 @@
 #
-# Copyright 2013 The Android Open-Source Project
+# Copyright (C) 2013 The Android Open-Source Project
 # Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from flox
+# Inherit Common Configuration
 $(call inherit-product, device/asus/flox/device-common.mk)
 
-# Inherit the proprietary files
+# Inherit Proprietary Configuration
 $(call inherit-product, vendor/asus/debx/debx-vendor.mk)
 
 # Camera
@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/asus/debx/overlay
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay/packages/apps/Bluetooth
@@ -31,12 +31,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.debx:$(TARGET_COPY_OUT_RAMDISK)/fstab.flox \
     $(LOCAL_PATH)/rootdir/etc/fstab.debx:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.flox
 
-# Rild
+# RIL
 PRODUCT_PACKAGES += \
-    rild \
     CarrierConfig \
-    BasicSmsReceiver
+    BasicSmsReceiver \
+    rild
 
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     hostapd_default.conf

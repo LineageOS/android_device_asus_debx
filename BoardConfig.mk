@@ -4,30 +4,36 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# Inherit from flox
+
+# Inherit Common Configuration
 include device/asus/flox/BoardConfigCommon.mk
+
+# Inherit Proprietary Configurations
+include vendor/asus/debx/BoardConfigVendor.mk
+
+# Defined Paths
+DEVICE_PATH := $(DEVICE_PATH)
+
+# Board Info
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := deb
 TARGET_BOOTLOADER_NAME := deb
-TARGET_BOARD_INFO_FILE := device/asus/debx/board-info.txt
 
-# Manifest
-DEVICE_MANIFEST_FILE += device/asus/debx/manifest.xml
+# Manifests
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Properties
 TARGET_SYSTEM_PROP += \
-    device/asus/flox/system.prop \
-    device/asus/debx/system.prop
+    $(COMMON_PATH)/system.prop \
+    $(DEVICE_PATH)/system.prop
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/asus/debx
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/asus/debx/rootdir/etc/fstab.debx
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.debx
 
-# Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += device/asus/debx/sepolicy
-
-# Inherit the proprietary files
-include vendor/asus/debx/BoardConfigVendor.mk
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
