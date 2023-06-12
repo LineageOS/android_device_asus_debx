@@ -12,7 +12,7 @@ include device/asus/flox/BoardConfigCommon.mk
 include vendor/asus/debx/BoardConfigVendor.mk
 
 # Defined Paths
-DEVICE_PATH := $(DEVICE_PATH)
+DEVICE_PATH := device/asus/debx
 
 # Board Info
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
