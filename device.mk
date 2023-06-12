@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
     BasicSmsReceiver \
     rild
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     hostapd_default.conf
