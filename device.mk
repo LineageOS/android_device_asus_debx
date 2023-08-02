@@ -11,10 +11,6 @@ $(call inherit-product, device/asus/flox/device-common.mk)
 # Inherit Proprietary Configuration
 $(call inherit-product, vendor/asus/debx/debx-vendor.mk)
 
-# Camera
-PRODUCT_PACKAGES += \
-    camera.debx
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
